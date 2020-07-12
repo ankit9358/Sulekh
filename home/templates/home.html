@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'login/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+
+</head>
+<body>
+<!--navigation bar -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand navLogo" href="{% url 'home' %}">Sulekh</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav_content">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav_content">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <div class="nav-link" ><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Login</button></div>                <!--   login  -->
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+{% for message in messages %}
+    <div class="alert alert-{{ message.tags }} mb-0 alert-dismissible fade show" role="alert">
+      <strong>Message! </strong> {{ message }}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+{% endfor %}
+<!--image slider -->
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="{% static 'home/images/one.jpg' %}" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="{% static 'home/images/2.jpg' %}" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="{% static 'home/images/3.jpg' %}" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<!--fixed content-->
+  <div class="col-12 main-text hidden-xs">
+      <div class="col-12 text-center">
+          <h4>Sulekh</h4>
+          <h6>
+              A Free Platform To Read And Write
+          </h6>
+          <div>
+              <a class="btn btn-clear btn-sm btn-min-block" data-toggle="modal" data-target="#myModal" href="#">Login</a><a class="btn btn-clear btn-sm btn-min-block"
+                            href="{% url 'register'%}">Register</a></div>
+      </div>
+  </div>
+
+
+
+<!--jumbotron-->
+
+<div class="container-fluid">
+        <div class="row jumbotron">
+            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
+                <p class ="lead">text goes here</p>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
+                <a href="#"><button type="button" class="btn btn-outline-secondary btn-lg">More</button></a>
+            </div>
+        </div>
+</div>
+
+<!--welcome-->
+
+<div class="container-fluid padding">
+  <div class="row welcome text-center">
+    <div class="col-12">
+      <h1 class="display-4">Built with ease</h1>
+    </div>
+    <hr>
+    <div class="col-12">
+      <p class="lead">text goes here</p>
+    </div>
+  </div>
+</div>
+
+<!--three column section-->
+
+<div class="container-fluid padding">
+  <div class="row text-center padding yes">
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <i class="fa fa-code"></i>
+      <h3>HTML5</h3>
+      <p>text goes here</p>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <i class="fa fa-bold"></i>
+      <h3>Bootstrap</h3>
+      <p>text goes here</p>
+    </div>
+    <div class="col-xs-12 col-md-4">
+      <i class="fa fa-css3"></i>
+      <h3>CSS3</h3>
+      <p>text goes here</p>
+    </div>
+  </div>
+  <hr class="my-4">
+</div>
+
+<!--two column section-->
+
+<div class="container-fluid padding">
+  <div class="row padding">
+    <div class="col-lg-6">
+      <h2>text goes here</h2>
+      <p>para1</p>
+      <p>para2</p>
+      <p>para3</p>
+      <br>
+      <a href="#" class="btn btn-primary">learn more</a>
+    </div>
+    <div class="col-lg-6">
+      <img src="{% static 'home/images/desk.png' %}" class="img-fluid">
+    </div>
+  </div>
+</div>
+<hr class="my-4">
+
+<!--fixed background-->
+
+<figure>
+  <div class="fixed-wrap">
+    <div id="fixed">
+
+    </div>
+  </div>
+</figure>
+
+<!--meeet the team-->
+
+<div class="container-fluid padding">
+  <div class="row welcome text-center">
+    <div class="col-12">
+      <h1 class="dispaly-4">Meet the team</h1>
+    </div>
+  </div>
+</div>
+
+<!--cards-->
+
+<div class="container-fluid padding">
+  <div class="row padding">
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" src="{% static 'home/images/team1.png' %}">
+        <div class="card-body">
+          <h4 class="card-title">Ankit</h4>
+          <p class="cardtext">text goes here</p>
+          <a href="#" class="btn btn-outline-secondary">See profile</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" src="{% static 'home/images/team2.png' %}">
+        <div class="card-body">
+          <h4 class="card-title">Tripti</h4>
+          <p class="cardtext">text goes here</p>
+          <a href="#" class="btn btn-outline-secondary">See profile</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" src="{% static 'home/images/team3.png' %}">
+        <div class="card-body">
+          <h4 class="card-title">Vidushi</h4>
+          <p class="cardtext">text goes here</p>
+          <a href="#" class="btn btn-outline-secondary">See profile</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" src="{% static 'home/images/team4.png' %}">
+        <div class="card-body">
+          <h4 class="card-title">Deepam</h4>
+          <p class="cardtext">text goes here</p>
+          <a href="#" class="btn btn-outline-secondary">See profile</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--connect-->
+
+<div class="container-fluid padding">
+  <div class="row text-center padding">
+    <div class="col-12">
+      <h2>Connect</h2>
+    </div>
+    <div class="col-12 social padding icns">
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-instagram"></i></a>
+    </div>
+  </div>
+</div>
+
+<!--footer-->
+
+<footer>
+  <div class="container-fluid padding">
+    <div class="row text-center">
+      <div class="col-md-4">
+        <img src="">
+        <hr class="light">
+        <p>write something here....</p>
+      </div>
+      <div class="col-md-4">
+        <img src="">
+        <hr class="light">
+        <p>write something here....</p>
+      </div>
+            <div class="col-md-4">
+        <img src="">
+        <hr class="light">
+        <p>write something here....</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!----MODAL-------->
+
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal" >
+    <div class="modal-dialog">
+      <div class="modal-content" style="background-color:rgba(0, 0, 0, 0.5);">
+
+        <!-- Modal Header -->
+        <div class="modal-header no-border">
+            <div class="container-fluid">
+                <div class="col-12  pdd">
+                    <div class="row bdr wht">
+                        <div class="col-2 pdd"></div>
+                        <div class="col-8 pdd d-flex justify-content-center">
+                            <h4 style="padding-top: 0.5rem">Login with</h4>
+                        </div>
+                        <div class="col-2 pdd">
+                            <button type="button" class="close" data-dismiss="modal">&times</button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row icns">
+                    <div class="col-4 d-flex justify-content-center pdd">
+                        <a href="#" class="fa fa-facebook"></a>
+                    </div>
+                    <div class="col-4 d-flex justify-content-center pdd">
+                        <a href="#" class="fa fa-twitter"></a>
+                    </div>
+                    <div class="col-4 d-flex justify-content-center pdd">
+                        <a href="#" class="fa fa-google"></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-5 pdd"><hr></div>
+                    <div class="col-sm-2 d-flex justify-content-center wht pdd">
+                        <span>OR</span>
+                    </div>
+                    <div class="col-sm-5 pdd"><hr></div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body no-border">
+           <div class="container" >
+              <form method="post" action="">
+                  {% csrf_token %}
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
+                    </div>
+                    <input name="email" id="em" type="email" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon"><i class="fa fa-lock"></i></span>
+                    </div>
+                    <input name="password" id="pss" type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
+                </div>
+                  <button type="submit" class="btn btn-primary btn-block">LOGIN</button>
+              </form>
+            </div>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer no-border">
+            <div>
+                <span>
+                    <a href="{% url 'register'%}">create an account/</a>
+                    <a href="#">Forget password?</a>
+                </span>
+            </div>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!---->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>

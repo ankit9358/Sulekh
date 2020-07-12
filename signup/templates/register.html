@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{% static 'signup/css/style.css' %}">
+  <title>Signup</title>
+</head>
+<body>
+    <div class="container-fluid body2">
+    <div class="wrapper">
+        <div class="container-fluid" >
+            <div class="card card-4 " >
+                <div class="card-body">
+                    <div class="d-flex justify-content-center "><h4>Signup With</h4></div>
+
+                        <!--icons-->
+
+                    <div class="row icns">
+                    <div class="col-4 d-flex justify-content-center ">
+                        <a href="#" class="fa fa-facebook"></a>
+                    </div>
+                    <div class="col-4 d-flex justify-content-center ">
+                        <a href="#" class="fa fa-twitter"></a>
+                    </div>
+                    <div class="col-4 d-flex justify-content-center ">
+                        <a href="#" class="fa fa-google"></a>
+                    </div>
+                </div>
+
+                    <!--lines-->
+
+                    <div class="row">
+                        <div class="col-sm-5"><hr></div>
+                        <div class="col-sm-2 d-flex justify-content-center">
+                            <span>OR</span>
+                        </div>
+                        <div class="col-sm-5"><hr></div>
+                    </div>
+
+                    <!--fields-->
+
+                    <form action="" method="post">
+                                {% csrf_token %}
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon"><i class="fa fa-user"></i></span>
+                        </div>
+                        {{form.name}}
+                    </div>
+                    <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" ><i class="fa fa-envelope"></i></span>
+                    </div>
+                        {{form.email}}
+                    </div>
+                    <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" ><i class="fa fa-phone"></i></span>
+                    </div>
+                        {{form.mobile}}
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                        </div>
+                        {{form.password}}
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">SIGN UP</button>
+                    </form>
+                    <!-- content -->
+                    <!-- content -->
+                </div>
+            
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

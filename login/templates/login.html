@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+    <!--<meta charset="UTF-8">-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="{% static 'login/css/style.css' %}">
+    <title>Title</title>
+</head>
+<body>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+    Login
+  </button>
+
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal" data-backdrop="false">
+    <div class="modal-dialog">
+      <div class="modal-content" style="background-color:rgba(0, 0, 0, 0.5);">
+
+        <!-- Modal Header -->
+        <div class="modal-header no-border">
+            <div class="container-fluid">
+                <div class="row bdr">
+                    <!--<div class="col-1"></div>-->
+                    <div class="col-10 d-flex justify-content-center "><h4>Login with</h4></div>
+                    <div class="col-2" >
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                </div>
+                <div class="row icns">
+                    <div class="col-4 d-flex justify-content-center ">
+                        <a href="#" class="fa fa-facebook"></a>
+                    </div>
+                    <div class="col-4 d-flex justify-content-center ">
+                        <a href="#" class="fa fa-twitter"></a>
+                    </div>
+                    <div class="col-4 d-flex justify-content-center ">
+                        <a href="#" class="fa fa-google"></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-5"><hr></div>
+                    <div class="col-2 d-flex justify-content-center">
+                        <span>OR</span>
+                    </div>
+                    <div class="col-sm-5"><hr></div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body no-border">
+           <div class="container" >
+              <form method="post" action="{% url 'login' %}">
+                  {% csrf_token %}
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
+                    </div>
+                    <input name="email" id="em" type="email" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon"><i class="fa fa-lock"></i></span>
+                    </div>
+                    <input name="password" id="pss" type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
+                </div>
+                  <button type="submit" class="btn btn-primary btn-block">LOGIN</button>
+              </form>
+            </div>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer no-border">
+            <div>
+                <span>
+                    <a href="#">create an account/</a>
+                    <a href="#">Forget password?</a>
+                </span>
+            </div>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

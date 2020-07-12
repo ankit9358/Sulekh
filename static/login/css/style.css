@@ -1,0 +1,74 @@
+.bdr{
+    height: 50px;
+}
+.bdr1{
+    background-color: blue;
+}
+.modal-body {
+    position: relative;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 0rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+.modal-header{
+    padding-bottom: 0px;
+    padding-top: 0.5rem;
+}
+.modal-header .close {
+    padding: 0rem;
+    padding-right: 0rem;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    margin: 0rem -1rem 0rem auto;
+}
+
+[class*="col-"].pdd{
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.pdd{
+    padding-bottom: 0.2rem;
+    padding-top: 0.2rem;
+}
+
+.wht{
+    color: white;
+}
+
+.no-border{
+  border:none;
+}
+.icns .fa {
+  padding: 20px;
+  font-size: 20px;
+  width: 75px;
+  border-radius: 50% ;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+.fa-instagram {
+  background: #dd4b39;
+  color: white;
+}
+hr{
+   background-color: white;
+}

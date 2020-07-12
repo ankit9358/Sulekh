@@ -1,0 +1,74 @@
+.navLogo{
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    font-size: 150%;
+    text-shadow: 1px 1px 10px #e3c058;
+
+}
+img{
+    height: 35px;
+}
+.form-inline .form-control{
+    width: 350px;
+}
+
+.dropdown-toggle::after {
+    content: none;
+}
+.dropdown-item:hover{
+    background-color: #a6c !important;
+    border-radius: .125rem;
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
+}
+.dropdown .dropdown-menu .dropdown-item {
+    padding: .5rem;
+    font-size: .9rem;
+}
+.btns{
+    padding: 20px;
+}
+li.nav-item{
+    padding: .5rem;
+    padding-right: 1rem;
+}
+span.notification-badge {
+    position: relative;
+    top: -10px;
+    right: 10px;
+    border: $white 1px solid;
+    margin-right: -18px;
+}
+.media.border{
+    box-shadow:
+}
+.z-depth-1-half{
+    /* -webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15) !important; */
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15) !important;
+
+
+@media screen and (min-width: 1200px){
+    .ml-auto{
+        margin-left: 10% !important;
+    }
+   .form-inline .form-control{
+        width: 400px;
+    }
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px){
+    /* .ml-auto{
+        margin-left: auto% !important;
+    } */
+    .form-inline .form-control{
+        width: 350px;
+    }
+
+}
+@media screen and (max-width: 576px){
+    .form-inline .form-control {
+        width: 300px;
+
+
+    }
+}
